@@ -6,7 +6,7 @@ const { connectDB } = require('./db');
 
 const authRoutes = require('./routes/authRoutes');
 const busRoutes = require('./routes/busRoutes');
-const timetableRoutes = require('./routes/timetableRoutes');
+const timetableRoutes = require('./routes/timetableroutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 
