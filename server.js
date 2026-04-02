@@ -1,41 +1,19 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-
-const { connectDB } = require('./db');
-
-const authRoutes = require('./routes/authRoutes');
-const busRoutes = require('./routes/busRoutes');
-const timetableRoutes = require('./routes/timetableroutes');
-const bookingRoutes = require('./routes/bookingRoutes');
-const searchRoutes = require('./routes/searchRoutes');
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('Bus Tracker Backend is running');
+app.get("/", (req, res) => {
+  res.send("Server working");
 });
 
-app.use('/auth', authRoutes);
-app.use('/bus', busRoutes);
-app.use('/timetables', timetableRoutes);
-app.use('/bookings', bookingRoutes);
-app.use('/search', searchRoutes);
+const timetableRoutes = require("./routes/timetableroutes");
+app.use("/api/timetable", timetableRoutes);
 
-async function startServer() {
-  try {
-    await connectDB();
-    app.listen(PORT, '0.0.0.0', () => {
-      console.log(`Server running on port ${PORT}`);
-    });
-  } catch (error) {
-    console.error('Failed to start server:', error);
-    process.exit(1);
-  }
-}
+const PORT = process.env.PORT || 5000;
 
-startServer();
+app.listen(PORT, () => {
+  console.log("Server started on port " + PORT);
+});
