@@ -1,0 +1,42 @@
+{
+  "route_01": [
+    {
+      "id": "time_01",
+      "busId": "bus_01",
+      "routeId": "route_01",
+      "routeName": "Fort -> Pettah",
+      "departure": "08:00 AM",
+      "arrival": "08:45 AM",
+      "dayType": "weekday"
+    },
+    {
+      "id": "time_02",
+      "busId": "bus_01",
+      "routeId": "route_01",
+      "routeName": "Fort -> Pettah",
+      "departure": "10:00 AM",
+      "arrival": "10:45 AM",
+      "dayType": "weekday"
+    },
+    {
+      "id": "time_03",
+      "busId": "bus_02",
+      "routeId": "route_01",
+      "routeName": "Fort -> Pettah",
+      "departure": "01:00 PM",
+      "arrival": "01:45 PM",
+      "dayType": "weekend"
+    }
+  ],
+  "route_02": [
+    {
+      "id": "time_04",
+      "busId": "bus_03",
+      "routeId": "route_02",
+      "routeName": "Pettah -> Borella",
+      "departure": "09:00 AM",
+      "arrival": "09:50 AM",
+      "dayType": "weekday"
+    }
+  ]
+}

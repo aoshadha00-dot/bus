@@ -1,0 +1,30 @@
+{
+  "bus_01": {
+    "id": "bus_01",
+    "number": "138",
+    "route": "Fort -> Pettah",
+    "routeId": "route_01",
+    "driverId": "driver_01",
+    "lat": 6.9271,
+    "lng": 79.8612,
+    "speed": 0,
+    "eta": 0,
+    "status": "stopped",
+    "updatedAt": "",
+    "capacity": 40
+  },
+  "bus_02": {
+    "id": "bus_02",
+    "number": "120",
+    "route": "Pettah -> Borella",
+    "routeId": "route_01",
+    "driverId": "driver_02",
+    "lat": 6.928,
+    "lng": 79.862,
+    "speed": 0,
+    "eta": 0,
+    "status": "stopped",
+    "updatedAt": "",
+    "capacity": 40
+  }
+}

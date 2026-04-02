@@ -1,0 +1,12 @@
+{
+  "route_01": {
+    "id": "route_01",
+    "name": "Fort -> Pettah",
+    "stops": ["Fort", "Pettah", "Central Stop", "Market Side", "End Point"]
+  },
+  "route_02": {
+    "id": "route_02",
+    "name": "Pettah -> Borella",
+    "stops": ["Pettah", "Town Hall", "Borella"]
+  }
+}

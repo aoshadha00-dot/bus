@@ -1,0 +1,14 @@
+{
+  "booking_1775102399442": {
+    "id": "booking_1775102399442",
+    "userName": "anjana",
+    "busId": "bus_01",
+    "routeId": "route_01",
+    "routeName": "Fort -> Pettah",
+    "departure": "08:00 AM",
+    "arrival": "08:45 AM",
+    "seatNo": "3",
+    "status": "confirmed",
+    "bookedAt": "2026-04-02T03:59:59.442Z"
+  }
+}

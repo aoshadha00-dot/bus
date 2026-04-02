@@ -1,0 +1,28 @@
+{
+  "user_1001": {
+    "id": "user_1001",
+    "name": "Passenger One",
+    "email": "passenger@test.com",
+    "password": "123456",
+    "role": "passenger",
+    "assignedBusId": "",
+    "createdAt": "2026-04-02T10:00:00.000Z"
+  },
+  "user_1002": {
+    "id": "user_1002",
+    "name": "Driver One",
+    "email": "driver@test.com",
+    "password": "123456",
+    "role": "driver",
+    "assignedBusId": "bus_01",
+    "createdAt": "2026-04-02T10:00:00.000Z"
+  },
+  "user_1775113660243": {
+    "id": "user_1775113660243",
+    "name": "anju",
+    "email": "anjanaoshadha07@gmail.com",
+    "password": "anjanaapps",
+    "role": "driver",
+    "createdAt": "2026-04-02T07:07:40.243Z"
+  }
+}
