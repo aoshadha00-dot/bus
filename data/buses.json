@@ -1,30 +1,24 @@
 {
   "bus_01": {
     "id": "bus_01",
-    "number": "138",
-    "route": "Fort -> Pettah",
-    "routeId": "route_01",
-    "driverId": "driver_01",
-    "lat": 6.9271,
-    "lng": 79.8612,
-    "speed": 0,
-    "eta": 0,
-    "status": "stopped",
-    "updatedAt": "",
-    "capacity": 40
+    "busName": "Matara Express",
+    "busNumber": "NB-1234",
+    "routeName": "Matara - Colombo",
+    "totalSeats": 45,
+    "tripStatus": "stopped",
+    "startedAt": "2026-04-04T13:04:51.769Z",
+    "driverId": "user_1002",
+    "stoppedAt": "2026-04-04T13:05:04.416Z"
   },
-  "bus_02": {
-    "id": "bus_02",
-    "number": "120",
-    "route": "Pettah -> Borella",
-    "routeId": "route_01",
-    "driverId": "driver_02",
-    "lat": 6.928,
-    "lng": 79.862,
-    "speed": 0,
-    "eta": 0,
-    "status": "stopped",
-    "updatedAt": "",
-    "capacity": 40
+  "bus_05": {
+    "id": "bus_05",
+    "busName": "Galle Rider",
+    "busNumber": "NC-5678",
+    "routeName": "Galle - Colombo",
+    "totalSeats": 40,
+    "tripStatus": "stopped",
+    "startedAt": "2026-04-03T12:40:54.296Z",
+    "driverId": "user_1775113660243",
+    "stoppedAt": "2026-04-03T12:41:01.994Z"
   }
 }

@@ -1,12 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 const {
-  searchBusesByStops,
-  getAllStops,
-} = require('../controllers/searchController');
+  getStops,
+  searchBuses,
+  searchTimetable,
+} = require("../controllers/searchController");
 
-router.get('/stops', getAllStops);
-router.get('/buses', searchBusesByStops);
+router.get("/stops", getStops);
+router.get("/buses", searchBuses);
+router.get("/timetable", searchTimetable);
 
 module.exports = router;

@@ -10,5 +10,15 @@
     "seatNo": "3",
     "status": "confirmed",
     "bookedAt": "2026-04-02T03:59:59.442Z"
+  },
+  "booking_1775225585755": {
+    "id": "booking_1775225585755",
+    "userId": "user_1775220115285",
+    "busId": "bus_01",
+    "pickup": "matara",
+    "destination": "colombo",
+    "seatCount": 1,
+    "status": "confirmed",
+    "createdAt": "2026-04-03T14:13:05.756Z"
   }
 }

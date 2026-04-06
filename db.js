@@ -1,30 +1,17 @@
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 
-let db;
+const connectDB = async () => {
+  try {
+    const mongoUri =
+      'mongodb+srv://magebususer:MageBus12345@magebus-cluster.zc5d4ia.mongodb.net/bus_tracker?retryWrites=true&w=majority&appName=Cluster0';
 
-async function connectDB() {
-  const uri = process.env.MONGODB_URI;
-  const dbName = process.env.DB_NAME || 'bus_tracker';
+    await mongoose.connect(mongoUri);
 
-  if (!uri) {
-    throw new Error('MONGODB_URI is missing');
+    console.log('MongoDB Atlas connected successfully');
+  } catch (error) {
+    console.error('MongoDB connection failed:', error.message);
+    process.exit(1);
   }
-
-  const client = new MongoClient(uri);
-  await client.connect();
-
-  db = client.db(dbName);
-  console.log('MongoDB connected');
-}
-
-function getDB() {
-  if (!db) {
-    throw new Error('Database not connected');
-  }
-  return db;
-}
-
-module.exports = {
-  connectDB,
-  getDB,
 };
+
+module.exports = connectDB;

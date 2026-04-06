@@ -1,14 +1,18 @@
 const express = require('express');
-const router = express.Router();
+const authMiddleware = require('../middleware/authMiddleware');
 
 const {
-  getAllBookings,
   createBooking,
-  getSeatAvailability,
+  getMyBookings,
+  getBookingsForBus,
+  cancelBooking,
 } = require('../controllers/bookingController');
 
-router.get('/', getAllBookings);
-router.get('/availability', getSeatAvailability);
-router.post('/', createBooking);
+const router = express.Router();
+
+router.post('/', authMiddleware, createBooking);
+router.get('/my', authMiddleware, getMyBookings);
+router.get('/bus/:busId', authMiddleware, getBookingsForBus);
+router.put('/:id/cancel', authMiddleware, cancelBooking);
 
 module.exports = router;
