@@ -41,20 +41,21 @@ const createBus = async (req, res) => {
     }
 
     const bus = await Bus.create({
-      busName: String(busName).trim(),
-      busNumber: String(busNumber || routeNumber).trim(),
-      routeNumber: String(routeNumber || busNumber).trim(),
-      routeName: String(routeName || '').trim(),
-      startLocation: String(startLocation).trim(),
-      endLocation: String(endLocation).trim(),
+      name: (name || routeName || busName || "Bus").trim(),
+      busName: (busName || name || routeName || "Bus").trim(),
+
+      busNumber: (busNumber || routeNumber || "001").trim(),
+      routeNumber: (routeNumber || busNumber || "001").trim(),
+      routeName: (routeName || name || busName || "Route").trim(),
+
+      startLocation: (startLocation || "start").trim(),
+      endLocation: (endLocation || "end").trim(),
+
       totalSeats: Number(totalSeats || 40),
-      availableSeats: Number(
-        availableSeats != null ? availableSeats : totalSeats || 40
-      ),
+      availableSeats: Number(availableSeats || totalSeats || 40),
       latitude: Number(latitude || 0),
       longitude: Number(longitude || 0),
       speed: Number(speed || 0),
-      isActive: true,
     });
 
     return res.status(201).json({
