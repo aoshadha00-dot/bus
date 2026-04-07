@@ -21,6 +21,8 @@ const getAllBuses = async (req, res) => {
 const createBus = async (req, res) => {
   try {
     const {
+      name,
+
       busName,
       busNumber,
       routeNumber,
@@ -96,7 +98,6 @@ const updateBus = async (req, res) => {
       latitude,
       longitude,
       speed,
-      isActive,
     } = req.body;
 
     if (busName != null) bus.busName = String(busName).trim();
