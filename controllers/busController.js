@@ -83,6 +83,7 @@ const createBus = async (req, res) => {
         message: 'Bus name and route number are required',
       });
     }
+    console.log("BUS CREATE NEW VERSION RUNNING");
 
     const bus = new Bus({
       id: `bus_${Date.now()}`,

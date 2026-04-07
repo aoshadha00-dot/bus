@@ -79,18 +79,20 @@ router.post("/buses", authMiddleware, adminMiddleware, async (req, res) => {
     }
 
     const bus = new Bus({
-      busNumber: busNumber.trim(),
-      routeName: routeName.trim(),
-      startLocation: startLocation || "",
-      endLocation: endLocation || "",
-      driverName: driverName || "",
-      driverId: driverId || null,
-      departureTime: departureTime || "",
-      price: Number(price || 0),
-      totalSeats: Number(totalSeats || 40),
-      availableSeats: Number(availableSeats || totalSeats || 40),
-      isActive: isActive !== undefined ? isActive : true,
-    });
+  busNumber: busNumber.trim(),
+  routeName: routeName.trim(),
+  name: routeName.trim(),
+
+  startLocation: startLocation || "",
+  endLocation: endLocation || "",
+  driverName: driverName || "",
+  driverId: driverId || null,
+  departureTime: departureTime || "",
+  price: Number(price || 0),
+  totalSeats: Number(totalSeats || 40),
+  availableSeats: Number(availableSeats || totalSeats || 40),
+  isActive: isActive !== undefined ? isActive : true,
+});
 
     await bus.save();
 
