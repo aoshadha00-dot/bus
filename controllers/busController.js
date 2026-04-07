@@ -84,11 +84,13 @@ const createBus = async (req, res) => {
       });
     }
     console.log("BUS CREATE NEW VERSION RUNNING");
+    console.log("ADMIN BUS ROUTE NEW");
 
     const bus = new Bus({
-      id: `bus_${Date.now()}`,
-      name: finalName,
-      busName: finalName,
+      name: routeName.trim(),
+
+      busNumber: busNumber.trim(),
+      routeName: routeName.trim(),
       routeNumber: finalRouteNumber,
       busNumber: finalRouteNumber,
       routeName: finalRouteNumber,
