@@ -87,22 +87,20 @@ const createBus = async (req, res) => {
     console.log("ADMIN BUS ROUTE NEW");
 
     const bus = new Bus({
-      name: routeName.trim(),
+      id: `bus_${Date.now()}`,
 
-      busNumber: busNumber.trim(),
-      routeName: routeName.trim(),
+      name: finalName,
+      busName: finalName,
+
       routeNumber: finalRouteNumber,
       busNumber: finalRouteNumber,
       routeName: finalRouteNumber,
+
       startLocation: finalStartLocation,
       endLocation: finalEndLocation,
-      availableSeats: finalSeats,
-      totalSeats: finalSeats,
-      latitude: Number(latitude ?? 0),
-      longitude: Number(longitude ?? 0),
-      driverName: (driverName || '').trim(),
-      arrivalTime: (arrivalTime || '').trim(),
-      isActive: isActive === true,
+
+      totalSeats: 40,
+      availableSeats: 40,
     });
 
     await bus.save();
